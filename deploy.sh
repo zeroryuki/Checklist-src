@@ -11,4 +11,4 @@ git remote add origin-site https://${GH_TOKEN}@github.com/zeroryuki/PT_Checklist
 
 git add .
 git commit -m "Rebuild site"
-git push --force origin-site master
+git push origin-site master
