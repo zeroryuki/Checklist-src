@@ -18,7 +18,7 @@
 
 ---
 
-<p align="center"> Evil Ghost Checklist Reference
+<p align="center"> Elite Ghost Checklist Reference
     <br> 
 </p>
 
