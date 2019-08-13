@@ -79,6 +79,7 @@ For IDE, you can install **markdown preview** plugin. I put the popular one
 
  * ***NeoVim*** ([markdown-preview.nvim](https://github.com/iamcco/markdown-preview.nvim))
 [![GitHub stars](https://img.shields.io/github/stars/iamcco/markdown-preview.nvim?style=social)](https://github.com/iamcco/markdown-preview.nvim)
+![](markdownPre.gif)
 
 * ***VS Code*** ([markdown-preview-enhanced](https://github.com/shd101wyy/markdown-preview-enhanced)
 )[![GitHub stars](https://img.shields.io/github/stars/shd101wyy/markdown-preview-enhanced?style=social)](https://github.com/shd101wyy/markdown-preview-enhanced)
