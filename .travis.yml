@@ -1,18 +1,28 @@
 language: go
 cache: 
-  - hugo
-  - go
-install:
-  - curl -LO https://github.com/gohugoio/hugo/releases/download/v0.56.3/hugo_0.56.3_Linux-64bit.deb
-  - sudo dpkg -i hugo_0.56.3_Linux-64bit.deb
-go:
+   hugo: true
+   go: true
+
+install: 
+    - curl -LO https://github.com/gohugoio/hugo/releases/download/v0.56.3/hugo_0.56.3_Linux-64bit.deb
+    - sudo dpkg -i hugo_0.56.3_Linux-64bit.deb
+    - git clone https://$GH_TOKEN@github.com/zeroryuki/PT-Source $PTSRC
+
+go: 
   - 1.12.7
 
-script: go version
+before_script: 
+    - mkdir public
+    - cd $PTSRC/prodSite
 
-deploy:
-  - provider: script
-    script: bash deploy.sh
+script: hugo -c $HOME_SRC -d $HOME_SRC/public/ >/dev/null 2>&1
+
+deploy: 
+    provider: pages
     skip_cleanup: true
-    on:
+    github_token: $GH_TOKEN
+    keep_history: false
+    target_branch: gh-pages
+    local_dir: public
+    on: 
       branch: master
