@@ -10,7 +10,7 @@ title: Checker
 
 > Run Nmap with this command
 
-```shell
+```md
 nmap -sSV --script ftp-anon.nse -p21 IP -T4 --reason 
 ```
 

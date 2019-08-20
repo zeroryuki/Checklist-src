@@ -27,6 +27,7 @@
 - [Getting Started](#getting_started)
 - [Preview](#preview)
 - [Deployment](#deployment)
+- [TODO](#todo)
 - [Built Using](#built_using)
 - [Contributing](../CONTRIBUTING.md) //WIP
 - [Authors](#authors)
@@ -66,6 +67,9 @@ For new content, create new file with `title.md`, and at the top of the file put
 weight: <n>
 title: <OneWordOnly>
 ---
+
+# Main title on top of center column
+
 ```
 
 > `<n>` - Higher number will put your content to the bottom of the list in order. Make sure to check other file weight number to get in order.
@@ -220,11 +224,14 @@ Follow this step to get your content on the site, after PR approved.
 11. Delete your local branch and git pull to get the latest commit.
 </pre>
 
+## TODO <a name = "todo"></a>
+- [ ] Pentest Type
+- [ ]
+
 ## ⛏️ Built Using <a name = "built_using"></a>
 - [Hugo](https://hohugo.io/) - Web Framework
 - [Go](https://golang.org/) - Builder env
 - [Travis-ci](https://travis-ci.org) - Open Source CI/CD
--
 
 ## ✍️ Authors <a name = "authors"></a>
 - [@mucomplex](https://github.com/mucomplex) - Idea
@@ -235,6 +242,6 @@ See also the list of [contributors](https://github.com/zeroryuki/Checklist-src/c
 ***we're expecting more idea from you, get in the list now***
 
 ## 🎉 Acknowledgements <a name = "acknowledgement"></a>
-- Hat tip to anyone whose code was used
+- Hat tip to anyone who's code was used
 - Inspiration
 - References
