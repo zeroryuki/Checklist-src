@@ -10,20 +10,14 @@ jobs:
     runs-on: ubuntu-latest
     steps:
     - uses: actions/checkout@master
-    - name: Installing Git
-      uses: zeroryuki/actions-git@v0.0.3"
-      with:
-        args: clone https://${GITHUB_TOKEN}@github.com/zeroryuki/PT-Source.git
-    - name: Chdir
-      run: cd PT-Source
-    - name: build
-      uses: peaceiris/actions-hugo@v0.57.2
-      with:
-        args: -c ./ --gc --minify --cleanDestinationDir
-    - name: deploy
-      uses: peaceiris/actions-gh-pages@v1.1.0
-      if: contains(github.ref, 'master')
+    - name: Grab Source
+      run: |
+        git clone https://${token}@github.com/zeroryuki/PT-Source
+        cd PT-Source
+        ls -a ${RUNNER_WORKPACE}
       env:
-        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-        PUBLISH_BRANCH: gh-pages
-        PUBLISH_DIR: ./public
+        token: ${{secrets.GH_TOKEN}}
+    - name: build
+      uses: peaceiris/actions-hugo@v0.56.3
+      with:
+        args: -c ${GITHUB_WORKSPACE} --gc --minify --cleanDestinationDir

@@ -1,0 +1,7 @@
+name: 'Clone'
+description: 'Clone a repo'
+inputs:
+  secrets:
+    description: 'Access token'
+runs:
+  plugin: 'clone'
