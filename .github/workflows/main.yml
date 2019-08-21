@@ -12,10 +12,8 @@ jobs:
     - uses: actions/checkout@master
     - name: Action for git command
       uses: zeroryuki/actions-git@v0.0.3
-      env:
-        TOKEN:${{secrets.GH_TOKEN}}
       with:
-        args: clone https://${TOKEN}@github.com/zeroryuki/PT-Source.git
+        args: clone https://${GH_TOKEN}@github.com/zeroryuki/PT-Source.git
     - name: Chdir
       run: cd PT-Source
     - name: build
