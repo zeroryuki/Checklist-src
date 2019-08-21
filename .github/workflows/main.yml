@@ -10,20 +10,4 @@ jobs:
     runs-on: ubuntu-latest
     steps:
     - uses: actions/checkout@master
-    - name: Action for git command
-      uses: zeroryuki/actions-git@v0.0.3
-      with:
-        args: clone https://${GITHUB_ACTOR}:${GH_TOKEN}@github.com/zeroryuki/PT-Source.git
-    - name: Chdir
-      run: cd PT-Source
-    - name: build
-      uses: peaceiris/actions-hugo@v0.57.2
-      with:
-        args: -c ./ --gc --minify --cleanDestinationDir
-    - name: deploy
-      uses: peaceiris/actions-gh-pages@v1.1.0
-      if: contains(github.ref, 'master')
-      env:
-        GITHUB_TOKEN: ${{ secrets.GH_TOKEN }}
-        PUBLISH_BRANCH: gh-pages
-        PUBLISH_DIR: ./public
+    - uses: ./.github/actions
