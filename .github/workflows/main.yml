@@ -12,6 +12,8 @@ jobs:
     - uses: actions/checkout@master
     - name: Action for git command
       uses: zeroryuki/actions-git@v0.0.3
+      env:
+        GITHUB_TOKEN:${{secrets.GH_TOKEN}}
       with:
         args: clone https://${GITHUB_TOKEN}@github.com/zeroryuki/PT-Source.git
     - name: Chdir
@@ -24,6 +26,6 @@ jobs:
       uses: peaceiris/actions-gh-pages@v1.1.0
       if: contains(github.ref, 'master')
       env:
-        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        GITHUB_TOKEN: ${{ secrets.GH_TOKEN }}
         PUBLISH_BRANCH: gh-pages
         PUBLISH_DIR: ./public
