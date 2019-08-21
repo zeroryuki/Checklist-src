@@ -10,8 +10,8 @@ jobs:
     runs-on: ubuntu-latest
     steps:
     - uses: actions/checkout@master
-    - name: Installing Git
-      uses: zeroryuki/actions-git@v0.0.3"
+    - name: Action for git command
+      uses: zeroryuki/actions-git@v0.0.3
       with:
         args: clone https://${GITHUB_TOKEN}@github.com/zeroryuki/PT-Source.git
     - name: Chdir
