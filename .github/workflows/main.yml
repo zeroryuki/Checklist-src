@@ -13,7 +13,7 @@ jobs:
     - name: Action for git command
       uses: zeroryuki/actions-git@v0.0.3
       with:
-        args: clone https://${GH_TOKEN}@github.com/zeroryuki/PT-Source.git
+        args: clone https://${GITHUB_ACTOR}:${GH_TOKEN}@github.com/${GITHUB_REPOSITORY}.git
     - name: Chdir
       run: cd PT-Source
     - name: build
