@@ -1,23 +1,19 @@
 name: Main workflow
 
-on:
-  push:
-    branches:
-    - master
+on: [push]
 
 jobs:
-  build-deploy:
-    runs-on: ubuntu-latest
+  test:
+    runs-on: ubuntu-18.04
     steps:
     - uses: actions/checkout@master
-    - name: Grab Source
+    - name: Sourcing
       run: |
-        git clone https://${token}@github.com/zeroryuki/PT-Source
-        cd PT-Source
-        ls -a ${RUNNER_WORKPACE}
+        git clone https://${token}@github.com/zeroryuki/PT-Source ${HOME}/PT-Source
+        cd ${HOME}/PT-Source
       env:
         token: ${{secrets.GH_TOKEN}}
-    - name: build
-      uses: peaceiris/actions-hugo@v0.56.3
+    - name: build test
+      uses: zeroryuki/hugo-docker@v0.57.2
       with:
-        args: -c ${GITHUB_WORKSPACE} --gc --minify --cleanDestinationDir
+        args: ls -la ${GITHUB_WORKSPACE}
