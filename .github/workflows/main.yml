@@ -10,14 +10,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
     - uses: actions/checkout@master
-    - name: Grab Source
+    - name: Clone source
       run: |
-        git clone https://${token}@github.com/zeroryuki/PT-Source
-        cd PT-Source
-        ls -a ${RUNNER_WORKPACE}
-      env:
-        token: ${{secrets.GH_TOKEN}}
-    - name: build
-      uses: peaceiris/actions-hugo@v0.56.3
-      with:
-        args: -c ${GITHUB_WORKSPACE} --gc --minify --cleanDestinationDir
+        git clone https://${secrets.GH_TOKEN}@github.com/zeroryuki/PT-Source ../PT-Source
+        ls -la ../
