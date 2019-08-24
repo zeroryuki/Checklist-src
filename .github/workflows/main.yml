@@ -10,7 +10,7 @@ jobs:
     strategy:
       matrix:
         version: [0.56.3, 0.57.2]
-        image: [ext-alpine]
+        image: [ext-debian]
 
     runs-on: ubuntu-18.04
     steps:
