@@ -15,6 +15,6 @@ jobs:
         git clone https://${token}@github.com/zeroryuki/PT-Source ../PT-Source
       env:
         token: ${{ secrets.GH_TOKEN }}
-    - name: Env
+    - name: Content src
       run: |
-        env | grep "Checklist"
+        ls -la ${RUNNER_WORKSPACE}
