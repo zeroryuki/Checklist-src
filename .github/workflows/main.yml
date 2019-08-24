@@ -7,6 +7,11 @@ on:
 
 jobs:
   test-build:
+    strategy:
+      matrix:
+        version: [0.56.3, 0.57.2]
+        image: [ext-alpine]
+
     runs-on: ubuntu-18.04
     steps:
     - uses: actions/checkout@master
@@ -17,9 +22,11 @@ jobs:
       env:
         token: ${{ secrets.GH_TOKEN }}
     - name: Hugo build
-      uses: zeroryuki/hugo-docker@v0.57.2
+      uses: klakegg/actions-hugo@1.0.0
       with:
-        args: ldd /go/bin/hugo
+        version: ${{ matrix.version }}
+        image: ${{ matrix.image }}
+        source: /github/home/PT-Source
       env: 
         SRC: /github/home/PT-Source
         CNT: /github/workspace
