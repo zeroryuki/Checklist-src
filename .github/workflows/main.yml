@@ -18,7 +18,7 @@ jobs:
     - name: Hugo build
       uses: zeroryuki/hugo-docker@v0.57.2
       with:
-        entrypoint: cd ${RUNNER_WORKSPACE}
+        entrypoint: "ls -la ${RUNNER_WORKSPACE}"
       env: 
         RUNNER_WORKSPACE: /github/home
         SRC: /home/runner/work/Checklist-src/
