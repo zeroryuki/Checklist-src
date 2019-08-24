@@ -18,7 +18,7 @@ jobs:
     - name: Hugo build
       uses: zeroryuki/hugo-docker@v0.57.2
       with:
-        entrypoint: ENV
+        entrypoint: env
       env: 
         SRC: ../PT-Source
         CNT: ../Checklist-src
