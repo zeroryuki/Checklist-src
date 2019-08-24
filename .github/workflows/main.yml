@@ -17,8 +17,7 @@ jobs:
     - uses: actions/checkout@master
     - name: Clone source
       run: |
-        git clone https://${token}@github.com/zeroryuki/PT-Source /home/runner/work/_temp/_github_home/PT-Source
-        cd /home/runner/work/_temp/_github_home/PT-Source
+        git clone https://${token}@github.com/zeroryuki/PT-Source config
       env:
         token: ${{ secrets.GH_TOKEN }}
     - name: Hugo build
@@ -26,7 +25,7 @@ jobs:
       with:
         version: ${{ matrix.version }}
         image: ${{ matrix.image }}
-        source: /github/home/PT-Source
+        source: config
       env: 
         SRC: /github/home/PT-Source
         CNT: /github/workspace
