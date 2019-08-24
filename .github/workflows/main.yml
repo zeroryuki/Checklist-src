@@ -17,9 +17,9 @@ jobs:
       env:
         token: ${{ secrets.GH_TOKEN }}
     - name: Hugo build
-      uses: zeroryuki/hugo-docker@v0.56.3
+      uses: zeroryuki/hugo-docker@v0.57.2
       with:
-        args: /go/bin/hugo -c ${CNT} --gc --minify
+        args: /go/bin/hugo -s /github/home/PT-Source -c /github/workspace -l ${SRC}/layouts --gc --minify
       env: 
         SRC: /github/home/PT-Source
         CNT: /github/workspace
