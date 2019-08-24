@@ -18,5 +18,6 @@ jobs:
     - name: Hugo build
       uses: zeroryuki/hugo-docker@v0.57.2
       with:
-        entrypoint: /usr/bin/ls -la ${RUNNER_WORKSPACE}
-      
+        entrypoint: ENV
+      env: 
+        src: ${{ RUNNER_WORKSPACE }}/PT-Source
