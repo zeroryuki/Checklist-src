@@ -15,7 +15,6 @@ jobs:
         git clone https://${token}@github.com/zeroryuki/PT-Source ../PT-Source
       env:
         token: ${{ secrets.GH_TOKEN }}
-    - name: Hugo
+    - name: Env
       run: |
-        apt-get install hugo
-        hugo version
+        env | grep "Checklist"
