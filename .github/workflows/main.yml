@@ -12,6 +12,7 @@ jobs:
     - uses: actions/checkout@master
     - name: Clone source
       run: |
-        cd ..
-        git clone https://${secrets.GH_TOKEN}@github.com/zeroryuki/PT-Source PT-Source
-        ls -la 
+        git clone https://${token}@github.com/zeroryuki/PT-Source ../PT-Source
+        ls -la ../
+      env:
+        token: ${{ secrets.GH_TOKEN }}
