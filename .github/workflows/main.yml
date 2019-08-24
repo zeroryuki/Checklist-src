@@ -18,7 +18,7 @@ jobs:
     - name: Hugo build
       uses: peaceiris/actions-hugo@v0.57.2
       with:
-        entrypoint: ls ${SRC}
+        entrypoint: /bin/bash ls -la ${SRC}
       env: 
         SRC: /home/runner/work/Checklist-src/PT-Source
         CNT: /home/runner/work/Checklist-src/Checklist-src
