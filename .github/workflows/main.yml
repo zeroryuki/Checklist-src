@@ -16,7 +16,7 @@ jobs:
       env:
         token: ${{ secrets.GH_TOKEN }}
     - name: Hugo build
-      uses: peaceiris@actions-hugov0.57.2
+      uses: peaceiris/actions-hugo@v0.57.2
       with:
         args: -s ${SRC} -c {CNT} --gc --minify
       env: 
