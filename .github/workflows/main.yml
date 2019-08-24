@@ -13,12 +13,13 @@ jobs:
     - name: Clone source
       run: |
         git clone https://${token}@github.com/zeroryuki/PT-Source /home/runner/work/_temp/_github_home/PT-Source
+        cd /home/runner/work/_temp/_github_home/PT-Source
       env:
         token: ${{ secrets.GH_TOKEN }}
     - name: Hugo build
       uses: zeroryuki/hugo-docker@v0.56.3
       with:
-        args: /go/bin/hugo -s {SRC} -c ${CNT} --gc --minify
+        args: /go/bin/hugo -c ${CNT} --gc --minify
       env: 
         SRC: /github/home/PT-Source
         CNT: /github/workspace
