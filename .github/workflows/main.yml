@@ -16,9 +16,9 @@ jobs:
       env:
         token: ${{ secrets.GH_TOKEN }}
     - name: Hugo build
-      uses: peaceiris/actions-hugo@v0.57.2
+      uses: zeroryuki/hugo-docker@v0.57.2
       with:
-        args: -s ${SRC} -c {CNT} --gc --minify
+        args: ls -la ${SRC}
       env: 
         SRC: /github/home/PT-Source
         CNT: /github/workspace
