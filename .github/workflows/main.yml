@@ -7,7 +7,7 @@ on:
 
 jobs:
   test-build:
-    runs-on: ubuntu-latest
+    runs-on: ubuntu-18.04
     steps:
     - uses: actions/checkout@master
     - name: Clone source
@@ -18,7 +18,7 @@ jobs:
     - name: Hugo build
       uses: zeroryuki/hugo-docker@v0.57.2
       with:
-        entrypoint: ls /github/home
+        entrypoint: echo $RUNNER_WORKSPACE
       env: 
         RUNNER_WORKSPACE: /github/home
         SRC: /home/runner/work/Checklist-src/
