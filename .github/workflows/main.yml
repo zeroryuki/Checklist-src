@@ -20,4 +20,5 @@ jobs:
       with:
         entrypoint: ENV
       env: 
-        src: ${{ RUNNER_WORKSPACE }}/PT-Source
+        SRC: ../PT-Source
+        CNT: ../Checklist-src
