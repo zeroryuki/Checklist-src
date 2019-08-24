@@ -18,7 +18,7 @@ jobs:
     - name: Hugo build
       uses: zeroryuki/hugo-docker@v0.57.2
       with:
-        args: ls -la ${SRC}
+        args: hugo -s ${SRC} -c {CNT}
       env: 
         RUNNER_WORKSPACE: /github/workspace
         SRC: /github/home/PT-Source
