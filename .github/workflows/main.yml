@@ -18,7 +18,7 @@ jobs:
     - name: Hugo build
       uses: zeroryuki/hugo-docker@v0.57.2
       with:
-        args: -s ${SRC} -c ${CNT} --gc --minify
+        entrypoint: ls ${SRC}
       env: 
         SRC: /home/runner/work/Checklist-src/PT-Source
         CNT: /home/runner/work/Checklist-src/Checklist-src
