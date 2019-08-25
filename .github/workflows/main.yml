@@ -21,7 +21,7 @@ jobs:
       env:
         token: ${{ secrets.GH_TOKEN }}
     - name: Hugo build
-      uses: zeroryuki/hugo-actions@v1.0.0
+      uses: zeroryuki/hugo-actions@v1.0.1
       with:
         version: ${{ matrix.version }}
         image: ${{ matrix.image }}
