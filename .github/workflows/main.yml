@@ -28,7 +28,7 @@ jobs:
         source: PT-Source
         content: Checklist-src
         env: production
-        command: -s ${SRC} -c ${CNT} --gc --minify
+        command: -s /src -c /content --gc --minify
       env: 
         SRC: /src
         CNT: /content
