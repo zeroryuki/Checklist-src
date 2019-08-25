@@ -23,7 +23,9 @@ jobs:
     - name: Hugo build
       uses: zeroryuki/hugo-actions@v1.0.0
       with:
-        command: config
+        version: ${{ matrix.version }}
+        image: ${{ matrix.image }}
+        source: /src
       env: 
         RUNNER_WORKSPACE: /src
         CNT: /github/workspace
