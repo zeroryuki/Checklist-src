@@ -26,6 +26,8 @@ jobs:
         version: ${{ matrix.version }}
         image: ${{ matrix.image }}
         source: /src
+        env: production
+        command: env
       env: 
         RUNNER_WORKSPACE: /src
         CNT: /github/workspace
