@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Pentester Checklist</title>
+    <link>https://zeroryuki.github.io/Checklist-src/</link>
+    <description>Recent content on Pentester Checklist</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    
+	<atom:link href="https://zeroryuki.github.io/Checklist-src/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Intro</title>
+      <link>https://zeroryuki.github.io/Checklist-src/intro/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://zeroryuki.github.io/Checklist-src/intro/</guid>
+      <description>Introduction Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.</description>
+    </item>
+    
+    <item>
+      <title>Tools</title>
+      <link>https://zeroryuki.github.io/Checklist-src/tools/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://zeroryuki.github.io/Checklist-src/tools/</guid>
+      <description> Tools  To authorize, use this code:
+ Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.
+Authorization: meowmeowmeow
+You must replace meowmeowmeow with your personal API key.  </description>
+    </item>
+    
+    <item>
+      <title>Checker</title>
+      <link>https://zeroryuki.github.io/Checklist-src/checker/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://zeroryuki.github.io/Checklist-src/checker/</guid>
+      <description>Checker FTP  Run Nmap with this command
+ nmap -sSV --script ftp-anon.nse -p21 IP -T4 --reason   The above command returns output like this:
+ PORT STATE SERVICE 21/tcp open ftp | ftp-anon: Anonymous FTP login allowed (FTP code 230) | -rw-r--r-- 1 1170 924 31 Mar 28 2001 .banner | d--x--x--x 2 root root 1024 Jan 14 2002 bin | d--x--x--x 2 root root 1024 Aug 10 1999 etc | drwxr-srwt 2 1170 924 2048 Jul 19 18:48 incoming [NSE: writeable] | d--x--x--x 2 root root 1024 Jan 14 2002 lib | drwxr-sr-x 2 1170 924 1024 Aug 5 2004 pub |_Only 6 shown.</description>
+    </item>
+    
+    <item>
+      <title>Errors</title>
+      <link>https://zeroryuki.github.io/Checklist-src/errors/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://zeroryuki.github.io/Checklist-src/errors/</guid>
+      <description>Errors This error section is stored in a separate file, errors.md. DocuAPI allows you to split the single page documentation in as many files as needed. Files are included in the default Hugo page order . One way of ordering the pages is by setting the page `weight` in the front matter. Pages with lower weight will be listed first. The Kittn API uses the following error codes:
+   Error Code Meaning     400 Bad Request &amp;ndash; Your request sucks   401 Unauthorized &amp;ndash; Your API key is wrong   403 Forbidden &amp;ndash; The command requested is hidden for administrators only   404 Not Found &amp;ndash; The specified command could not be found   405 Method Not Allowed &amp;ndash; You tried to access a command with an invalid method   406 Not Acceptable &amp;ndash; You requested a format that isn&amp;rsquo;t json   410 Gone &amp;ndash; The command requested has been removed from our servers   418 I&amp;rsquo;m a teapot   429 Too Many Requests &amp;ndash; You&amp;rsquo;re requesting too many commands!</description>
+    </item>
+    
+    <item>
+      <title></title>
+      <link>https://zeroryuki.github.io/Checklist-src/test/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://zeroryuki.github.io/Checklist-src/test/</guid>
+      <description></description>
+    </item>
+    
+  </channel>
+</rss>

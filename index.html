@@ -1,0 +1,395 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta name="generator" content="Hugo 0.57.2" />
+    <meta charset="utf-8">
+    <meta content="IE=edge,chrome=1" http-equiv="X-UA-Compatible">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <title>Pentester Checklist</title>
+    
+
+
+
+
+
+
+
+
+<link href='https://zeroryuki.github.io/Checklist-src/styles/screen.min.3e6185686ea5ae54b78a473b2fa055dbe0d726a428eee2b33dc68e3882b1465b.css' rel="stylesheet" media="screen" integrity="sha256-PmGFaG6lrlS3ikc7L6BV2&#43;DXJqQo7uKzPcaOOIKxRls=" />
+<link href='https://zeroryuki.github.io/Checklist-src/styles/print.min.b479fe84edba440b3faf04e34595c8bb966f4823abf7286262086e3792640842.css' rel="stylesheet" media="print" integrity="sha256-tHn&#43;hO26RAs/rwTjRZXIu5ZvSCOr9yhiYghuN5JkCEI=" />
+
+
+    
+
+
+
+
+
+
+<script src='https://zeroryuki.github.io/Checklist-src/js/all.js'></script>
+
+    
+</head>
+<body class="index" data-languages="[ &#34;go&#34; ,  &#34;shell&#34; ,  &#34;ruby&#34; ,  &#34;python&#34; ,  &#34;javascript&#34; ]">
+    <a href="#" id="nav-button">
+        <span>
+        NAV
+        <img src='https://zeroryuki.github.io/Checklist-src/images/navbar.png'/>
+      </span>
+    </a>
+    <div class="toc-wrapper">
+        
+         <img src='https://zeroryuki.github.io/Checklist-src/images/logo.png' class="logo" />
+        
+        <div class="lang-selector">
+            
+            <a href="#" data-language-name="go">Go</a>
+            
+            <a href="#" data-language-name="shell">Shell</a>
+            
+            <a href="#" data-language-name="ruby">Ruby</a>
+            
+            <a href="#" data-language-name="python">Python</a>
+            
+            <a href="#" data-language-name="javascript">Javascript</a>
+            
+        </div>
+         
+        
+        <div class="search">
+            <input type="search" class="search" id="input-search" placeholder=''>
+        </div>
+        <ul class="search-results"></ul>
+        
+        
+    <ul id="toc" class="toc-list-h1">
+        
+        
+            <li>
+                <a href="#introduction" class="toc-h1 toc-link" data-title="Introduction">Introduction</a>
+                
+            </li>
+        
+            <li>
+                <a href="#tools" class="toc-h1 toc-link" data-title="Tools">Tools</a>
+                
+            </li>
+        
+            <li>
+                <a href="#checker" class="toc-h1 toc-link" data-title="Checker">Checker</a>
+                
+                    <ul class="toc-list-h2">
+                        
+                            <li><a href="#ftp" class="toc-h2 toc-link" data-title="FTP">FTP</a></li>
+                        
+                            <li><a href="#rdp" class="toc-h2 toc-link" data-title="RDP">RDP</a></li>
+                        
+                            <li><a href="#smbv1" class="toc-h2 toc-link" data-title="SMBv1">SMBv1</a></li>
+                        
+                    </ul>
+                
+            </li>
+        
+            <li>
+                <a href="#errors" class="toc-h1 toc-link" data-title="Errors">Errors</a>
+                
+            </li>
+        
+    </ul>
+
+         
+        
+        <ul class="toc-footer">
+            
+            <li><a href='#'>Got Idea to contribute?</a></li>
+            
+            <li><a href="https://travis-ci.org/zeroryuki/Checklist-src"><img src="https://travis-ci.org/zeroryuki/Checklist-src.svg?branch=master" alt="Build Status" /></a></li>
+            
+            <li>PT Checklist <a href="https://github.com/zeroryuki/Checklist-src">Checklist</a></li>
+            
+        </ul>
+        
+        
+    </div>
+    <div class="page-wrapper">
+        <div class="dark-box"></div>
+        <div class="content">
+            
+    
+        
+
+<h1 id="introduction">Introduction</h1>
+
+<p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod
+tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At
+vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren,
+no sea takimata sanctus est Lorem ipsum dolor sit amet.</p>
+
+    
+        
+
+<h1 id="tools">Tools</h1>
+
+<blockquote>
+<p>To authorize, use this code:</p>
+</blockquote>
+
+<p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod
+tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At
+vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren,
+no sea takimata sanctus est Lorem ipsum dolor sit amet.</p>
+
+<p><code>Authorization: meowmeowmeow</code></p>
+
+<aside class="notice">
+You must replace <code>meowmeowmeow</code> with your personal API key.
+</aside>
+
+    
+        
+
+<h1 id="checker">Checker</h1>
+
+<h2 id="ftp">FTP</h2>
+
+<blockquote>
+<p>Run Nmap with this command</p>
+</blockquote>
+
+<pre><code class="language-md">nmap -sSV --script ftp-anon.nse -p21 IP -T4 --reason 
+</code></pre>
+
+<blockquote>
+<p>The above command returns output like this:</p>
+</blockquote>
+
+<pre><code class="language-shell">PORT   STATE SERVICE
+21/tcp open  ftp
+| ftp-anon: Anonymous FTP login allowed (FTP code 230)
+| -rw-r--r--   1 1170     924            31 Mar 28  2001 .banner
+| d--x--x--x   2 root     root         1024 Jan 14  2002 bin
+| d--x--x--x   2 root     root         1024 Aug 10  1999 etc
+| drwxr-srwt   2 1170     924          2048 Jul 19 18:48 incoming [NSE: writeable]
+| d--x--x--x   2 root     root         1024 Jan 14  2002 lib
+| drwxr-sr-x   2 1170     924          1024 Aug  5  2004 pub
+|_Only 6 shown. Use --script-args ftp-anon.maxlist=-1 to see all.
+</code></pre>
+
+<p>FTP anonymous login</p>
+
+<h3 id="action-host-port">Action (host, port)</h3>
+
+<p>Connects to the FTP server and checks if the server allows anonymous logins.</p>
+
+<h3 id="flags-parameters">Flags Parameters</h3>
+
+<table>
+<thead>
+<tr>
+<th>Parameter</th>
+<th>Default</th>
+<th>Description</th>
+</tr>
+</thead>
+
+<tbody>
+<tr>
+<td>host</td>
+<td>false</td>
+<td>If set to true, the result will also include blabla.</td>
+</tr>
+
+<tr>
+<td>port</td>
+<td>true</td>
+<td>If set to false, the result will include blablabla.</td>
+</tr>
+</tbody>
+</table>
+
+<aside class="success">
+Success — reminder blabla 
+</aside>
+
+<h2 id="rdp">RDP</h2>
+
+<pre><code class="language-shell">
+</code></pre>
+
+<blockquote>
+<p>The above command returns output like this:</p>
+</blockquote>
+
+<pre><code class="language-shell">
+</code></pre>
+
+<h4 id="nla-fips-enc-br">NLA,FIPS,ENC <br></h4>
+
+<p>Network Level Authentication (NLA) Disabled <br>
+Terminal Services Encryption Level is Medium or Low, or <br>
+Terminal Services Encryption Level is not FIPS-140 Compliant <br></p>
+
+<aside class="warning">Inside HTML code blocks like this one, you can't use Markdown, so use <code>&lt;code&gt;</code> blocks to denote code.</aside>
+
+<h3 id="http-request">HTTP Request</h3>
+
+<p><code>GET http://example.com/&lt;ID&gt;</code></p>
+
+<h3 id="parameters">Parameters</h3>
+
+<table>
+<thead>
+<tr>
+<th>Parameter</th>
+<th>Description</th>
+</tr>
+</thead>
+
+<tbody>
+<tr>
+<td>ID</td>
+<td>The ID</td>
+</tr>
+</tbody>
+</table>
+
+<h2 id="smbv1">SMBv1</h2>
+
+<pre><code class="language-shell">nmap -sV -T5 -Pn -p 445 --script smb-protocols IPs
+</code></pre>
+
+<blockquote>
+<p>The above command returns output like this:</p>
+</blockquote>
+
+<pre><code>wip
+</code></pre>
+
+<p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod
+tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At
+vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren,
+no sea takimata sanctus est Lorem ipsum dolor sit amet.</p>
+
+<h3 id="explaination">Explaination</h3>
+
+<p><code>DELETE http://example.com/kittens/&lt;ID&gt;</code></p>
+
+<h3 id="parameters-1">Parameters</h3>
+
+<table>
+<thead>
+<tr>
+<th>Parameter</th>
+<th>Description</th>
+</tr>
+</thead>
+
+<tbody>
+<tr>
+<td>ID</td>
+<td>The ID</td>
+</tr>
+</tbody>
+</table>
+
+    
+        
+
+<h1 id="errors">Errors</h1>
+
+<aside class="notice">This error section is stored in a separate file, errors.md. DocuAPI allows you to split the single page documentation in as many files as needed. Files are included in the  default Hugo page order . One way of ordering the pages is by setting the page `weight` in the front matter. Pages with lower weight will be listed first.</aside>
+
+<p>The Kittn API uses the following error codes:</p>
+
+<table>
+<thead>
+<tr>
+<th>Error Code</th>
+<th>Meaning</th>
+</tr>
+</thead>
+
+<tbody>
+<tr>
+<td>400</td>
+<td>Bad Request &ndash; Your request sucks</td>
+</tr>
+
+<tr>
+<td>401</td>
+<td>Unauthorized &ndash; Your API key is wrong</td>
+</tr>
+
+<tr>
+<td>403</td>
+<td>Forbidden &ndash; The command requested is hidden for administrators only</td>
+</tr>
+
+<tr>
+<td>404</td>
+<td>Not Found &ndash; The specified command could not be found</td>
+</tr>
+
+<tr>
+<td>405</td>
+<td>Method Not Allowed &ndash; You tried to access a command with an invalid method</td>
+</tr>
+
+<tr>
+<td>406</td>
+<td>Not Acceptable &ndash; You requested a format that isn&rsquo;t json</td>
+</tr>
+
+<tr>
+<td>410</td>
+<td>Gone &ndash; The command requested has been removed from our servers</td>
+</tr>
+
+<tr>
+<td>418</td>
+<td>I&rsquo;m a teapot</td>
+</tr>
+
+<tr>
+<td>429</td>
+<td>Too Many Requests &ndash; You&rsquo;re requesting too many commands! Slow down!</td>
+</tr>
+
+<tr>
+<td>500</td>
+<td>Internal Server Error &ndash; We had a problem with our server. Try again later.</td>
+</tr>
+
+<tr>
+<td>503</td>
+<td>Service Unavailable &ndash; We&rsquo;re temporarially offline for maintanance. Please try again later.</td>
+</tr>
+</tbody>
+</table>
+
+    
+        
+    
+
+        </div>
+        <div class="dark-box">
+            
+            <div class="lang-selector">
+                
+                <a href="#" data-language-name="go">Go</a>
+                
+                <a href="#" data-language-name="shell">Shell</a>
+                
+                <a href="#" data-language-name="ruby">Ruby</a>
+                
+                <a href="#" data-language-name="python">Python</a>
+                
+                <a href="#" data-language-name="javascript">Javascript</a>
+                
+            </div>
+            
+        </div>
+    </div>
+    
+</body>
+</html>
