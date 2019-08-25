@@ -25,9 +25,10 @@ jobs:
       with:
         version: ${{ matrix.version }}
         image: ${{ matrix.image }}
-        source: /src
+        source: PT-Source
+        content: Checklist-src
         env: production
-        command: env
+        command: -s ${SRC} -c ${CNT} --gc --minify
       env: 
-        RUNNER_WORKSPACE: /src
-        CNT: /github/workspace
+        SRC: /src
+        CNT: /content
