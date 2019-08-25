@@ -4,8 +4,8 @@ cache:
    go: true
 
 install: 
-    - curl -LO https://github.com/gohugoio/hugo/releases/download/v0.56.3/hugo_0.56.3_Linux-64bit.deb
-    - sudo dpkg -i hugo_0.56.3_Linux-64bit.deb
+    - curl -LO https://github.com/gohugoio/hugo/releases/download/v0.57.2/hugo_extended_0.57.2_Linux-64bit.deb
+    - sudo dpkg -i hugo_extended_0.57.2_Linux-64bit.deb
     - git clone https://$GH_TOKEN@github.com/zeroryuki/PT-Source $PTSRC
 
 go: 
@@ -13,9 +13,9 @@ go:
 
 before_script: 
     - mkdir public
-    - cd $PTSRC/prodSite
+    - npm install -g postcss-cli
 
-script: hugo -c $HOME_SRC -d $HOME_SRC/public/ >/dev/null 2>&1
+script: hugo -s $PTSRC -c $HOME_SRC -d $HOME_SRC/public/
 
 deploy: 
     provider: pages
