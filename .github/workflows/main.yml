@@ -10,22 +10,22 @@ jobs:
     strategy:
       matrix:
         version: [0.56.3, 0.57.2]
-        image: [ext-debian]
+        image: [ext-alpine]
 
     runs-on: ubuntu-18.04
     steps:
     - uses: actions/checkout@master
     - name: Clone source
       run: |
-        git clone https://${token}@github.com/zeroryuki/PT-Source config
+        git clone https://${token}@github.com/zeroryuki/PT-Source /home/runner/work/Checklist-src/PT-Source
       env:
         token: ${{ secrets.GH_TOKEN }}
     - name: Hugo build
-      uses: klakegg/actions-hugo@1.0.0
+      uses: zeroryuki/hugo-actions@v1.0.0
       with:
         version: ${{ matrix.version }}
         image: ${{ matrix.image }}
-        source: config
+        source:  ${RUNNER_WORKSPACE}/PT-Source
       env: 
-        SRC: /github/home/PT-Source
+        RUNNER_WORKSPACE: /src
         CNT: /github/workspace
