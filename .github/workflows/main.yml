@@ -22,7 +22,8 @@ jobs:
         token: ${{ secrets.GH_TOKEN }}
     - name: Hugo build
       uses: zeroryuki/hugo-actions@v1.0.0
-        entrypoint: env
+      with:
+        command: config
       env: 
         RUNNER_WORKSPACE: /src
         CNT: /github/workspace
